@@ -18,3 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/profile', [HomeController::class, 'profile']);
+Route::get('/contact', [HomeController::class, 'contact']);

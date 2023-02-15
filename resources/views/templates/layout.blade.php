@@ -23,10 +23,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ asset('assets') }}/index3.html" class="nav-link">Home</a>
+        <a href="{{ asset('assets') }}/index3.html" class="nav-link"></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link"></a>
       </li>
     </ul>
 
@@ -62,12 +62,46 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class=""></i>
               <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
+                DATA SISWA
+                <i></i>
+              </p>
+            </a>
+            <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                DATA KELAS
+                <i></i>
+              </p>
+            </a>
+            <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                DATA PETUGAS
+                <i></i>
+              </p>
+            </a>
+            <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                DATA SPP
+                <i></i>
+              </p>
+            </a>
+            <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                HISTORY
+                <i></i>
+              </p>
+            </a>
+            <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                LOGOUT
+                <i></i>
               </p>
             </a>
       </nav>
@@ -83,7 +117,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1>HEY WELCOME</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -113,7 +147,55 @@
           </div>
         </div>
         <div class="card-body">
-          Start creating your amazing application!
+          <body class="hold-transition login-page">
+            <div class="login-box">
+              <!-- /.login-logo -->
+              <div class="card card-outline card-primary">
+                <div class="card-header text-center">
+                  <a href="{{ asset('assets') }}/index2.html" class="h1"><b>Admin</b>LTE</a>
+                </div>
+                <div class="card-body">
+                  <p class="login-box-msg">Sign in to start your session</p>
+            
+                  <form action="login" method="post">
+                    @csrf
+                    <div class="input-group mb-3">
+                      <input type="email" class="form-control" placeholder="Email">
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-envelope"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-group mb-3">
+                      <input type="password" class="form-control" placeholder="Password">
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-lock"></span>
+                        </div>
+                      </div>
+                    </div>
+                    @error('email')
+                    <div class="error" style="color:red; font-size:0.8em">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="icheck-primary">
+                          <input type="checkbox" id="remember">
+                          <label for="remember">
+                            Remember Me
+                          </label>
+                        </div>
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                      </div>
+                      <!-- /.col -->
+                    </div>
+                  </form>
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

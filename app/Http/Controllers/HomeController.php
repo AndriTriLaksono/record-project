@@ -10,4 +10,13 @@ class HomeController extends Controller
 	{
       		return view('templates.layout');
     	}
+		public function profile()
+	{
+        	return view('dashboard.profile');
+    	}
+
+    	public function contact()
+	{
+        	return view('dashboard.contact');
+	}
 }
